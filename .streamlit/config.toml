@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#013369"  # NFL Blue
+backgroundColor = "#FFFFFF"  # NFL White
+secondaryBackgroundColor = "#4D4D4D"  # NFL Gray
+textColor = "#013369"  # NFL Blue
+font = "sans serif"

@@ -1,0 +1,122 @@
+/* NFL-themed color palette */
+:root {
+    --nfl-blue: #013369;
+    --nfl-red: #D50A0A;
+    --nfl-gold: #FFB612;
+    --nfl-gray: #4D4D4D;
+    --nfl-white: #FFFFFF;
+}
+
+/* Main container */
+.main .block-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--nfl-blue);
+    font-weight: bold;
+}
+
+/* Streamlit components */
+.stTextInput > div > div > input {
+    color: var(--nfl-blue);
+}
+
+.stSelectbox > div > div > select {
+    color: var(--nfl-blue);
+}
+
+.stMultiSelect > div > div > div > div > input {
+    color: var(--nfl-blue);
+}
+
+/* Metrics */
+.stMetric {
+    background-color: var(--nfl-white);
+    border: 1px solid var(--nfl-blue);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stMetric label {
+    color: var(--nfl-blue);
+    font-weight: bold;
+}
+
+.stMetric .metric-value {
+    color: var(--nfl-red);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Buttons */
+.stButton > button {
+    background-color: var(--nfl-blue);
+    color: var(--nfl-white);
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: var(--nfl-red);
+}
+
+/* Sidebar */
+.sidebar .sidebar-content {
+    background-color: var(--nfl-white);
+}
+
+/* Dataframe */
+.dataframe {
+    font-size: 12px;
+}
+
+.dataframe th {
+    background-color: var(--nfl-blue);
+    color: var(--nfl-white);
+    font-weight: bold;
+}
+
+.dataframe td {
+    background-color: var(--nfl-white);
+    color: var(--nfl-gray);
+}
+
+/* Charts */
+.plotly-chart {
+    background-color: var(--nfl-white);
+    border: 1px solid var(--nfl-blue);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+div[data-baseweb="select"] > div {
+    background-color: var(--nfl-blue);
+    color: white;
+}
+
+div[data-baseweb="select"] .css-1g6gooi {
+    color: var(--nfl-blue);
+
+/* Style the placeholder text */
+div[data-baseweb="select"] input {
+    color: white;
+}
+
+div[data-baseweb="select"]:hover > div {
+    background-color: var(--nfl-light-blue);
+}
+
+div[data-baseweb="tag"] {
+    background-color: var(--nfl-blue);
+    color: white;
+}
+/* Footer */
+footer {
+    visibility: hidden;
+}
