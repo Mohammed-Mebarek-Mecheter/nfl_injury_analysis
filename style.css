@@ -3,7 +3,7 @@
     --nfl-blue: #013369;
     --nfl-red: #D50A0A;
     --nfl-gold: #FFB612;
-    --nfl-gray: #4D4D4D;
+    --nfl-gray: #636161;
     --nfl-white: #FFFFFF;
 }
 
@@ -22,10 +22,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Streamlit components */
 .stTextInput > div > div > input {
     color: var(--nfl-blue);
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text horizontally */
 }
 
 .stSelectbox > div > div > select {
-    color: var(--nfl-blue);
+    color: var(--nfl-white);
 }
 
 .stMultiSelect > div > div > div > div > input {
@@ -39,17 +42,26 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text horizontally */
 }
 
 .stMetric label {
     color: var(--nfl-blue);
     font-weight: bold;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text horizontally */
 }
 
 .stMetric .metric-value {
     color: var(--nfl-red);
     font-size: 24px;
     font-weight: bold;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text horizontally */
 }
 
 /* Buttons */
@@ -61,15 +73,27 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .stButton > button:hover {
     background-color: var(--nfl-red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Sidebar */
 .sidebar .sidebar-content {
-    background-color: var(--nfl-white);
+    background-color: var(--nfl-gray);
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text horizontally */
 }
 
 /* Dataframe */

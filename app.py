@@ -8,6 +8,8 @@ from src.utils.helpers import format_number
 from dashboards.team_analysis import team_analysis_dashboard
 from dashboards.player_analysis import player_analysis_dashboard
 from dashboards.seasonal_trends import seasonal_trends_dashboard
+from streamlit_lottie import st_lottie
+import json
 
 # Page configuration
 st.set_page_config(
@@ -39,8 +41,8 @@ with st.sidebar:
         default_index=0,
         styles={
             "container": {"padding": "5!important", "background-color": "#fafafa"},
-            "icon": {"color": "#013369", "font-size": "25px"},
-            "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
+            "icon": {"color": "#636161", "font-size": "22px"},
+            "nav-link": {"font-size": "14px", "text-align": "center", "margin":"0px", "--hover-color": "#eee"},
             "nav-link-selected": {"background-color": "#013369"},
         }
     )
@@ -64,7 +66,7 @@ def display_metrics():
 
 # Overview section
 if selected == "Overview":
-    st.title("NFL Injury Analysis Overview")
+    st.title("NFL Injury Analysis")
     st.markdown("This dashboard provides insights into NFL injuries from 2012 to 2015.")
     display_metrics()
 
@@ -122,3 +124,36 @@ if st.sidebar.button("Download Full Dataset"):
         file_name="nfl_injury_analysis_full_dataset.csv",
         mime="text/csv"
     )
+# Sidebar Footer
+st.sidebar.markdown("---")
+st.sidebar.write("Developed by **Mebarek**")
+def load_lottie_file(filepath: str):
+    with open(filepath, "r") as f:
+        return json.load(f)
+
+# Load Lottie animations
+lottie_github = load_lottie_file("assets/images/github.json")
+lottie_linkedin = load_lottie_file("assets/images/linkedin.json")
+lottie_portfolio = load_lottie_file("assets/images/portfolio.json")
+
+# Sidebar section with Lottie animations and links
+with st.sidebar:
+    st.markdown("### Connect with me")
+
+    col1, col2 = st.columns([1, 3])
+    with col1:
+        st_lottie(lottie_github, height=30, width=30, key="lottie_github_sidebar")
+    with col2:
+        st.markdown("<a href='https://github.com/Mohammed-Mebarek-Mecheter/' target='_blank'>GitHub</a>", unsafe_allow_html=True)
+
+    col1, col2 = st.columns([1, 3])
+    with col1:
+        st_lottie(lottie_linkedin, height=30, width=30, key="lottie_linkedin_sidebar")
+    with col2:
+        st.markdown("<a href='https://www.linkedin.com/in/mohammed-mecheter/' target='_blank'>LinkedIn</a>", unsafe_allow_html=True)
+
+    col1, col2 = st.columns([1, 3])
+    with col1:
+        st_lottie(lottie_portfolio, height=30, width=30, key="lottie_portfolio_sidebar")
+    with col2:
+        st.markdown("<a href='https://mebarek.pages.dev/' target='_blank'>Portfolio</a>", unsafe_allow_html=True)
