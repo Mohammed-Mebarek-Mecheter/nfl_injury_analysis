@@ -95,7 +95,7 @@ if selected == "Overview":
     - **Player Injury Analysis:** Delve into individual player statistics, examining their injury history, the severity of injuries, and the impact on their playing time. Compare players to understand how injuries vary across positions and careers.
     - **League-Wide Injury Trends:** Analyze how injuries are distributed across the league, with visualizations breaking down injuries by player position, age, and season. Uncover patterns that can inform player safety measures.
     
-    The data used in this dashboard is sourced from NFL injury reports and has been carefully processed to ensure accuracy and completeness, offering reliable insights into the health and safety of NFL players.
+    The data used in this dashboard is sourced from [Data in Motion](https://datainmotion.co/path-player?courseid=monthly-data-visualization-challenges&unit=66ce80f5e7bcd463f00832bfUnit) It relates to one of their Monthly Data Visualization Challenges. The data has been carefully processed to ensure accuracy and completeness, offering reliable insights into the health and safety of NFL players.
     ''')
 
 # Team Analysis dashboard
@@ -134,7 +134,7 @@ def load_lottie_file(filepath: str):
 # Load Lottie animations
 lottie_github = load_lottie_file("assets/images/github.json")
 lottie_linkedin = load_lottie_file("assets/images/linkedin.json")
-lottie_portfolio = load_lottie_file("assets/images/portfolio.json")
+lottie_portfolio = load_lottie_file("assets/images/profile.json")
 
 # Sidebar section with Lottie animations and links
 with st.sidebar:
